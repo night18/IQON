@@ -67,7 +67,7 @@ a:visited{
 	color: #FFFFFF;
 }
 
-/*Out container*/
+/*==========================outer container========================*/
 #outer-container{
 	display: block;
 	width: 100%;
@@ -79,7 +79,7 @@ a:visited{
 	background-repeat: no-repeat;
 }
 
-/*Side bar*/
+/*==============================side bar=========================*/
 #left-sidebar{
 	display: block;
 	color: #FFFFFF;
@@ -114,7 +114,23 @@ a:visited{
 
 }
 
+/*==========================inner-container========================*/
+.inner-container{
+	display: block;
+	/*width: 100%;*/
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
 
+/*===================================home==========================*/
+
+#tf-home{
+	height: 100vh;
+	min-height: 100vh;
+}
+
+
+/*=================================footer==========================*/
 #menu-footer{
 	display: block;
 	background: rgba(0,0,0,0.29);
@@ -141,7 +157,10 @@ a:visited{
 	font-size: 14px;
 }
 
+/*==============================desktop screen=========================*/
 @media (min-width: 768px){
+
+	/*==============================side bar=========================*/
 	#left-sidebar{
 		height: 100%;
 		position: fixed;
@@ -177,6 +196,22 @@ a:visited{
 
 	#main-content{
 		height: 100%;
+	}
+
+	/*==========================inner-container========================*/
+
+	.inner-container{
+		position: absolute;
+		right: 0;
+		margin: 0 3% 0 22%;
+		height: 100vh;
+	}
+
+	/*===================================home==========================*/
+
+	#tf-home{
+		height: 100vh;
+		min-height: 100vh;
 	}
 
 }
