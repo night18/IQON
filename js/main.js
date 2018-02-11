@@ -9,7 +9,13 @@ function main() {
 (function () {
    'use strict';
 
+	$(document).ready(function () {
+		$('#sidebarCollapse').on('click', function () {
+			$('#left-sidebar').toggleClass('active');
+		});
+	});
    
+
 }());
 
 

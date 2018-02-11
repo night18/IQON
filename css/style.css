@@ -1,19 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Rubik+Mono+One|Rammetto+One|PT+Sans');
+
 body, html{
 	font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	color: #FFFFFF;
+	color: #000000;
 	font-size: 20px;
 	height: 100vh;
 	min-height: 100vh;
-	background-color: #d8e2dc;
+	background-color: #FFFFFF;
 }
 
 h1{
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	font-size: 42px;
 }
 h1 strong{
 	font-weight: 900;
@@ -45,7 +47,17 @@ p.intro{
 	line-height: 30px;
 	font-family: 'Raleway', sans-serif;
 }
-a, a:link{ 
+
+.left-word{
+	padding-left: 10px;
+	text-align: left;
+}
+
+.right-word{
+	padding-right: 10px;
+	text-align: right;
+}
+/*a, a:link{ 
 	color: #FFFFFF;
 	text-decoration: none;
 }
@@ -65,82 +77,127 @@ a:active{
 a:visited{
 	text-decoration: none;
 	color: #FFFFFF;
-}
+}*/
 
 /*==========================outer container========================*/
 #outer-container{
-	display: block;
+	display: flex;
+    align-items: stretch;
 	width: 100%;
 	height: 100vh;
-	background: url(../img/back1.jpeg);
-	background-size: cover;
-	background-position: left center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 }
 
 /*==============================side bar=========================*/
 #left-sidebar{
-	display: block;
+	min-width: 200px;
+	max-width: 200px;
+	background: linear-gradient(to bottom right, #8ED9DE  0% #2B4D86  100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(52,111,179,1)) color-stop(100%,#2B4D86 ));
+    background: -webkit-linear-gradient(top left, #8ED9DE 0%, #2B4D86  100%);
+    color: #FFFFFF;
+    transition: all 0.3s; /*for animate*/
+    text-align: center;
+    align-self:flex-start | flex-end;
+}
+
+#left-sidebar .logo {
+	padding: 20px;
+}
+
+#left-sidebar .logo strong{
+	display: none;
+}
+
+#left-sidebar a, a:link{ 
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#left-sidebar a:hover{
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: #457B9D 0.1em 0.1em;
+}
+
+#left-sidebar a:active{
+	text-decoration: none;
+	color: #DCDCDC;
+	text-shadow: #457B9D 0.05em 0.05em;
+}
+
+#left-sidebar a:visited{
+	text-decoration: none;
 	color: #FFFFFF;
 }
 
 #main-menu{
-	display: none;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 20px 0;
 	font-family: 'Raleway', sans-serif;
-	font-size: 0.9em;
-	line-height: 1;
+	font-size: 1.1em;
 	width: 100%;
 	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #main-menu li{
 	display: block;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0;
+	padding: 10px 0;
 	min-height: 35px;
 }
 
-#main-content{
+/*=====================close sidebar==========================*/
+#left-sidebar.active {
+    min-width: 100px;
+    max-width: 100px;
+    text-align: center;
+}
+
+#left-sidebar.active .logo h3{
+	display: none;
+}
+
+#left-sidebar.active .logo strong{
 	display: block;
-	position: relative;
-	margin: 0 5%;
-	overflow: visible;
-	min-height: 1px;
+}
+
+#left-sidebar.active #main-menu li {
+    padding: 20px 5px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#left-sidebar.active #main-menu li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#left-sidebar.active #menu-footer{
+	width: 100px;
+}
+
+#left-sidebar.active #menu-footer .social-icon li{
+	display: inline-block;
+	padding: 0 0px;
 
 }
 
-/*==========================inner-container========================*/
-.inner-container{
-	display: block;
-	/*width: 100%;*/
-	text-align: center;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
-}
-
-/*===================================home==========================*/
-
-#tf-home{
-	height: 100vh;
-	min-height: 100vh;
-}
-
-
-/*=================================footer==========================*/
+/*========================sidebar footer==========================*/
 #menu-footer{
-	display: block;
-	background: rgba(0,0,0,0.29);
-	padding: 15px 5px;
+	position: absolute;
+	bottom: 0px;
+	width: 200px;
 	text-align: center;
 	font-size: 1em;
+	transition: all 0.5s;
 } 
 
 .social-icon{
-	display: block;
 	list-style: none;
 	margin: 8px 0;
 	padding: 0;
@@ -157,8 +214,92 @@ a:visited{
 	font-size: 14px;
 }
 
-/*==============================desktop screen=========================*/
-@media (min-width: 768px){
+/*======================right side conatain=========================*/
+#main-content{
+	width: 100%;
+	min-height: 100vh;
+	transition: all 0.3s;
+	flex: 1;
+    display: flex;
+    overflow: auto;
+}
+
+.box {
+    min-height: min-content; /* needs vendor prefixes */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inner-container{
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+/*===================================home==========================*/
+
+#tf-home{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: url(../img/back2.jpg);
+	background-size: cover;
+	background-position: left center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+#tf-home  .color-block{
+	position: absolute;
+	top: 0;
+	right: 11%;
+	width: 17.5vmax;
+	padding-top: 15vh;
+	min-height: 65vh;
+	background-color:#3CB7DC  ; 
+	color: #234e7f;
+	/*text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.5);*/
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 3.5vmax;
+	line-height: 3vmax;
+}
+
+
+.color-block-Q{
+	position: absolute;
+	bottom: 0;
+	right: 17vmax;
+	width: 22vmax;
+	height: 22vmax;
+	-webkit-border-radius: 11vmax;
+  	-moz-border-radius: 11vmax;
+  	border-radius: 11vmax;
+  	background: #503E55;
+  	color: #CCF8B6; 
+  	padding-top: 8vmax;
+  	padding-right: 2vmax;
+  	padding-left: 2vmax;
+  	font-size: 1.2vmax;
+  	font-family: 'Raleway', sans-serif;
+}
+
+#tf-home .focus-word{
+	padding: 0;
+	font-size: 7.1vmax;
+	line-height: 7.5vmax;
+	color: #f24b13 ;
+}
+
+#tf-mission{
+	height: 100vh;
+	width: 100%;
+}
+
+
+/*========================For mobile device =========================*/
+@media (max-width: 768px){
 
 	/*==============================side bar=========================*/
 	#left-sidebar{
