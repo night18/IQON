@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Rubik+Mono+One|Rammetto+One|PT+Sans');
 
 body, html{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #000000;
@@ -38,14 +38,16 @@ h5{
 	line-height: 20px;
 }
 
-p{
-	font-family: 'Roboto', sans-serif;
+.subtitle{
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: bold;
+	font-size: 32px;
 }
-p.intro{
-	font-size: 24px;
-	margin: 12px 0 0;
-	line-height: 30px;
-	font-family: 'Raleway', sans-serif;
+
+.center{
+	text-align: center;
+	width: 100%;
+	display: block;
 }
 
 .left-word{
@@ -56,6 +58,15 @@ p.intro{
 .right-word{
 	padding-right: 10px;
 	text-align: right;
+}
+
+.line{
+    border-top: 4px solid #BC0883 ;
+    height: 10px;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 /*a, a:link{ 
 	color: #FFFFFF;
@@ -91,9 +102,10 @@ a:visited{
 #left-sidebar{
 	min-width: 200px;
 	max-width: 200px;
-	background: linear-gradient(to bottom right, #8ED9DE  0% #2B4D86  100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(52,111,179,1)) color-stop(100%,#2B4D86 ));
-    background: -webkit-linear-gradient(top left, #8ED9DE 0%, #2B4D86  100%);
+	/*background: linear-gradient(to bottom right, #0F0F0E   0% #000000   100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0F0F0E ) color-stop(100%,#000000  ));
+    background: -webkit-linear-gradient(top left, #0F0F0E  0%, #000000   100%);*/
+    background-color: #1f2223;
     color: #FFFFFF;
     transition: all 0.5s; /*for animate*/
     text-align: center;
@@ -222,7 +234,11 @@ a:visited{
 	/*flex: 1;*/
     display: block;
     overflow: auto;
-    /*flex-direction: column;*/
+    background-color: #F7F8F7;
+    /* background: linear-gradient(to bottom,rgb(91, 128, 197), rgb(144, 226, 234));
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(91, 128, 197)) color-stop(100%,rgb(144, 226, 234)));
+    background: -webkit-linear-gradient(top, rgb(91, 128, 197) 0%, rgb(144, 226, 234) 100%);
+    */ /*flex-direction: column;*/
 }
 
 .box {
@@ -300,6 +316,119 @@ a:visited{
 #tf-mission{
 	height: 100vh;
 	width: 100%;
+
+}
+
+/*========================roadmap=========================*/
+
+#tf-roadmap{
+	width: 100%;
+	background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(70, 126, 186));
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(70, 126, 186)));
+    background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(70, 126, 186) 100%);
+	/* background: #F7F8F7; */
+    /* color: #E9F6D0 ; */
+    color: #0B2B70  ;
+    padding: 50px 0px;
+    font-weight: bold;
+}
+
+#tf-roadmap .subtitle{
+	color: #0B2B70  ;
+}
+
+.timeline{
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 100px;
+	max-width: 1400px;
+}
+
+.timeline-table{
+	margin: 0;
+	font-size: 16px;
+}
+
+.timeline-row{
+	padding: 45px 0;
+	position: relative;
+	z-index: 20;
+}
+
+.illustration-container{
+	width: 125px;
+	display: inline-block;
+}
+
+.content-container{
+	display: inline-block;
+	width: 100%;
+	max-width: 360px;
+}
+
+#tf-roadmap .date, #tf-roadmap .hashtag{
+	color:#BC0883 ;
+}
+
+#tf-roadmap .content-block{
+	padding: 7px 0;
+}
+
+.clear{
+	clear: both;
+}
+
+.connection{
+	display: block;
+	width: 200px;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: linear-gradient(to right, rgb(188,8,131), rgb(195,141,5));
+	background: -webkit-gradient(linear, left, right, color-stop(0%,rgba(188,8,131)), color-stop(100%,rgb(195,141,5)));
+    background: -webkit-linear-gradient(left, rgba(188,8,131) 0%,rgb(195,141,5) 100%);
+}
+
+.timeline-row:nth-child(odd) .illustration-side{
+	text-align: right;
+	width: 50%;
+	float: left;
+	padding: 0 15px;
+}
+
+.timeline-row:nth-child(odd) .content-side{
+	text-align: left;
+	width: 50%;
+	float: right;
+	padding: 20px 20px 20px 40px;
+}
+
+.timeline-row:nth-child(odd) .connection{
+	transform: rotate(50deg);
+}
+
+.timeline-row:nth-child(even) .illustration-side{
+	text-align: left;
+	width: 50%;
+	float: right;
+	padding: 0 15px;
+}
+
+.timeline-row:nth-child(even) .content-side{
+	text-align: right;
+	width: 50%;
+	float: left;
+	padding: 20px 20px 20px 40px;
+}
+
+.timeline-row:nth-child(even) .connection{
+	transform: rotate(-50deg);
+	background: linear-gradient(to left, rgb(188,8,131), rgb(195,141,5));
+	background: -webkit-gradient(linear, right, left, color-stop(0%,rgba(188,8,131) ), color-stop(100%,rgb(195,141,5)));
+    background: -webkit-linear-gradient(right, rgba(188,8,131) 0%,rgb(195,141,5) 100%);
 }
 
 
