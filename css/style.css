@@ -528,16 +528,41 @@ a:visited{
 /*========================contact=========================*/
 
 #tf-contact{
-	width: 100%;
 	background: #D5D5D5; 
     color: #0B2B70;
-    padding: 50px 0px 100px 0px;
-    height: auto;
+    padding: 50px 80px 50px 80px;
+    position: relative;
+    display: block;
 }
 
 #tf-contact .social li{
 	display: inline-block;
-	margin-right: 10px;
+	text-align: center;
+}
+
+#tf-contact i.fab, #tf-contact i.fas {
+	height: 60px;
+	width: 60px;
+	border: 2px solid #0B2B70;
+	font-size: 40px;
+	padding: 7px 5px;
+	border-radius: 25%;
+	color:#0B2B70;
+	transition: all 0.5s;
+}
+
+#tf-contact i.fab:hover ,#tf-contact i.fas:hover{
+	background: #457B9D;
+	border-color: #457B9D;
+	color: #ffffff;
+}
+
+#tf-contact .subtitle{
+	font-size: 24px;
+}
+
+#tf-contact .margin-left{
+	margin-left: 40px;
 }
 
 /*========================footer=========================*/
