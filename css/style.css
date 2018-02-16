@@ -236,7 +236,8 @@ a:visited{
 	transition: all 0.5s;
 	/*flex: 1;*/
     display: block;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: #F7F8F7;
     /* background: linear-gradient(to bottom,rgb(91, 128, 197), rgb(144, 226, 234));
     background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(91, 128, 197)) color-stop(100%,rgb(144, 226, 234)));
@@ -507,7 +508,7 @@ a:visited{
 .team-hive{
 	margin: 0 auto;
 	width: 100%;
-	padding: 50px auto;
+	padding: 50px 20px;
 	max-width: 1400px;
 	overflow-y: hidden;
 }
@@ -635,6 +636,10 @@ li {
     display: block;
 }
 
+#tf-contact .container{
+	width: 100%;
+}
+
 #tf-contact .social li{
 	display: inline-block;
 	text-align: center;
@@ -662,7 +667,7 @@ li {
 }
 
 #tf-contact .margin-left{
-	margin-left: 40px;
+	margin-left: 20px;
 }
 
 /*========================footer=========================*/
@@ -681,6 +686,11 @@ nav#footer p{
 	font-size: 12px;
 	margin-top: 10px;
 }
+
+nav#footer .container{
+	width: 100%;
+}
+
 #footer i.fab, #footer i.fas {
 	height: 30px;
 	width: 30px;
