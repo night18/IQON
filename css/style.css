@@ -525,6 +525,21 @@ a:visited{
 	font-size: 14px;
 }
 
+/*========================contact=========================*/
+
+#tf-contact{
+	width: 100%;
+	background: #D5D5D5; 
+    color: #0B2B70;
+    padding: 50px 0px 100px 0px;
+    height: auto;
+}
+
+#tf-contact .social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
 /*========================footer=========================*/
 
 nav#footer{
