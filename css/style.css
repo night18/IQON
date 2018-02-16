@@ -320,6 +320,53 @@ a:visited{
 
 }
 
+/*========================mission=========================*/
+
+#tf-mission{
+	width: 100%;
+	/* background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(70, 126, 186)); */
+    /* background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(70, 126, 186))); */
+    /* background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(70, 126, 186) 100%); */
+	background: #D5D5D5;
+    /* color: #E9F6D0 ; */
+    color: #0B2B70  ;
+    padding: 50px 0px;
+    font-weight: bold;
+}
+
+#tf-mission .date, #tf-mission .hashtag{
+	color:#BC0883 ;
+}
+
+#tf-mission .content-block{
+	padding: 7px 0;
+}
+
+
+/*========================how it works=========================*/
+#tf-work{
+	width: 100%;
+	/*background: url(../img/38.jpg);*/
+	/*background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;*/
+	/*background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(123, 156, 237));
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(123, 156, 237)));
+    background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(123, 156, 237) 100%);
+	*/
+	background: #CAEBF2; 
+	/* color: #E9F6D0 ; */
+    color: #0B2B70;
+    padding: 50px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#tf-work .date, #tf-work .hashtag{
+	color:#BC0883 ;
+}
+
 /*========================roadmap=========================*/
 
 #tf-roadmap{
@@ -438,6 +485,7 @@ a:visited{
     background: -webkit-linear-gradient(right, rgba(188,8,131) 0%,rgb(195,141,5) 100%);
 }
 
+/*========================team=========================*/
 #tf-team{
 	width: 100%;
 	/*background: url(../img/38.jpg);*/
@@ -525,6 +573,53 @@ a:visited{
 	font-size: 14px;
 }
 
+
+/*========================fund=========================*/
+
+#tf-fund{
+	width: 100%;
+	/* background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(70, 126, 186)); */
+    /* background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(70, 126, 186))); */
+    /* background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(70, 126, 186) 100%); */
+	background: #D5D5D5;
+    /* color: #E9F6D0 ; */
+    color: #0B2B70  ;
+    padding: 50px 0px;
+    font-weight: bold;
+}
+
+#tf-fund .date, #tf-fund .hashtag{
+	color:#BC0883 ;
+}
+
+#tf-fund .content-block{
+	padding: 7px 0;
+}
+
+.pie svg { 
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; 
+  margin: auto;
+  width: 60%;
+}
+
+.graph { visibility: hidden; }
+
+.graph > * { 
+  visibility: visible;
+  transition: all 200ms ease-in-out;
+}
+ 
+.graph:hover > * { opacity: 0.5; }
+
+.graph__percent:hover {
+
+  opacity: 1;
+}
+
+li {
+    margin-bottom: 1em;
+}
 /*========================contact=========================*/
 
 #tf-contact{
