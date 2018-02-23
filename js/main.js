@@ -33,7 +33,9 @@ function main() {
 		// 	$('#left-sidebar').toggleClass('active');
 		// });
 
-    $('#main-content').fullpage();
+    $('#main-content').fullpage({
+      loopHorizontal: false
+    });
     
 	});
    
