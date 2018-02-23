@@ -29,9 +29,12 @@ function main() {
 	});
 
 	$(document).ready(function () {
-		$('#sidebarCollapse').on('click', function () {
-			$('#left-sidebar').toggleClass('active');
-		});
+		// $('#sidebarCollapse').on('click', function () {
+		// 	$('#left-sidebar').toggleClass('active');
+		// });
+
+    $('#main-content').fullpage();
+    
 	});
    
 
