@@ -340,14 +340,32 @@ a:visited{
 
 #tf-roadmap{
 	width: 100%;
-	/*background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(123, 156, 237));
-    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(123, 156, 237)));
-    background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(123, 156, 237) 100%);*/
+	height: 100%;
 	background: #FFFFFF; 
-    /* color: #E9F6D0 ; */
-    color: #17335C  ;
-    padding: 50px 0px;
+    color: #17335C;
+    perspective: 1200px;
+    transform-style: preserve-3d;
     font-weight: bold;
+}
+
+.pt-page {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+}
+
+.pt-page-current{
+	visibility: visible;
+}
+
+.pt-page-ontop {
+	z-index: 999;
 }
 
 #tf-roadmap .subtitle{

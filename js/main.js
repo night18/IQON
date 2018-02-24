@@ -34,10 +34,14 @@ function main() {
 		// });
 
     $('#main-content').fullpage({
-      loopHorizontal: false
+      loopHorizontal: false,
+      slidesNavigation: true,
+      scrollOverflow: true,
+      normalScrollElements:'#tf-roadmap'
     });
     
 	});
+
    
 
 }());
