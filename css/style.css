@@ -104,7 +104,7 @@ a:visited{
     z-index: 999;
     padding-top: 3px;
     background: #1f2223;
-    transition: all 0.5s; /*for animate*/
+    transition: all 0.55s; /*for animate*/
 }
 
 #menu-bar.active{

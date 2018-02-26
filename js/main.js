@@ -39,6 +39,7 @@ function main() {
       loopHorizontal: false,
       slidesNavigation: true,
       scrollOverflow: true,
+      bigSectionsDestination: top,
       normalScrollElements:'#tf-roadmap'
     });
     
