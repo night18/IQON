@@ -10,7 +10,7 @@ body, html{
 	font-size: 20px;
 	height: 100vh;
 	min-height: 100vh;
-	background-color: #FFFFFF;
+	background-color: #000000;
 }
 
 h1{
@@ -91,6 +91,26 @@ a:visited{
 	color: #FFFFFF;
 }*/
 
+#menu-bar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 50px;
+	max-width: 50px;
+	text-align: center;
+	display: block;
+    font-size: 1.3em;
+    color: #FFFFFF;
+    z-index: 999;
+    padding-top: 3px;
+    background: #1f2223;
+    transition: all 0.5s; /*for animate*/
+}
+
+#menu-bar.active{
+	margin-left: 65px;
+}
+
 /*==============================side bar=========================*/
 #left-sidebar{
 	position: fixed;
@@ -100,21 +120,25 @@ a:visited{
 	min-width: 100px;
     max-width: 100px;
     text-align: center;
-	/*background: linear-gradient(to bottom right, #0F0F0E   0% #000000   100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0F0F0E ) color-stop(100%,#000000  ));
-    background: -webkit-linear-gradient(top left, #0F0F0E  0%, #000000   100%);*/
-    background-color: #1f2223;
+	background-color: #1f2223;
     color: #FFFFFF;
     transition: all 0.5s; /*for animate*/
     z-index: 50;
+    padding-left: 15px;
+}
+
+#left-sidebar.active{
+	left: -100px;
 }
 
 #left-sidebar .logo {
-	padding: 20px;
+	padding: auto;
+	padding-top: 55px;
 }
 
-#left-sidebar .logo strong{
-	display: block;
+.logo img{
+	width: 75px;
+	height: 75px;
 }
 
 #left-sidebar a, a:link{ 
@@ -142,6 +166,8 @@ a:visited{
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
+
+
 #left-sidebar #main-menu li a i {
     margin-right:  0;
     display: block;
@@ -149,15 +175,6 @@ a:visited{
     margin-bottom: 5px;
 }
 
-#left-sidebar #menu-footer{
-	width: 100px;
-}
-
-#left-sidebar #menu-footer .social-icon li{
-	display: inline-block;
-	padding: 0 0px;
-
-}
 
 #left-sidebar a:hover{
 	color: #c9c7c7;
@@ -181,7 +198,7 @@ a:visited{
 #menu-footer{
 	position: absolute;
 	bottom: 0px;
-	width: 200px;
+	width: auto;
 	text-align: center;
 	font-size: 1em;
 	transition: all 0.5s;
@@ -210,8 +227,11 @@ a:visited{
 	min-height: 100vh;
 	transition: all 0.5s;
     display: block;
-    background-color: #F7F8F7;
     padding-left: 100px;
+}
+
+#main-content.active{
+	padding-left: 0;
 }
 
 .box {
@@ -232,6 +252,12 @@ a:visited{
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
+.section{
+	border-style: solid;
+    border-width: 15px;
+    border-color: #1f2223;
+}
+
 /*===================================home==========================*/
 
 #tf-home{
@@ -245,46 +271,7 @@ a:visited{
 	background-repeat: no-repeat;
 }
 
-#tf-home  .color-block{
-	position: absolute;
-	top: 0;
-	right: 11%;
-	width: 17.5vmax;
-	padding-top: 15vh;
-	min-height: 65vh;
-	background-color:#3CB7DC  ; 
-	color: #234e7f;
-	/*text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.5);*/
-	font-family: 'Cinzel Decorative', cursive;
-	font-size: 3.5vmax;
-	line-height: 3vmax;
-}
 
-
-.color-block-Q{
-	position: absolute;
-	bottom: 0;
-	right: 17vmax;
-	width: 22vmax;
-	height: 22vmax;
-	-webkit-border-radius: 11vmax;
-  	-moz-border-radius: 11vmax;
-  	border-radius: 11vmax;
-  	background: #503E55;
-  	color: #CCF8B6; 
-  	padding-top: 8vmax;
-  	padding-right: 2vmax;
-  	padding-left: 2vmax;
-  	font-size: 1.2vmax;
-  	font-family: 'Raleway', sans-serif;
-}
-
-#tf-home .focus-word{
-	padding: 0;
-	font-size: 7.1vmax;
-	line-height: 7.5vmax;
-	color: #f24b13 ;
-}
 
 
 /*========================mission=========================*/
@@ -297,7 +284,6 @@ a:visited{
 	background: #FFFFFF;
     color: #17335C ; 
     /*color: #0000  ;*/
-    padding: 50px 0px;
     font-weight: 600;
 }
 
@@ -313,16 +299,7 @@ a:visited{
 
 /*========================how it works=========================*/
 #tf-work{
-	width: 100%;
-	/*background: url(../img/38.jpg);*/
-	/*background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;*/
-	/*background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(123, 156, 237));
-    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(123, 156, 237)));
-    background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(123, 156, 237) 100%);
-	*/
+	/*width: 100%;*/
 	background: #e9ece5; 
 	/* color: #E9F6D0 ; */
     color: #203067 ;
