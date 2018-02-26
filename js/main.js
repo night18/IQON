@@ -40,7 +40,8 @@ function main() {
       slidesNavigation: true,
       scrollOverflow: true,
       bigSectionsDestination: top,
-      normalScrollElements:'#tf-roadmap'
+      // normalScrollElements:'#tf-roadmap',
+      anchors:['home', 'mission', 'work', 'team', 'fund']
     });
     
 	});

@@ -2268,6 +2268,7 @@
                 }
 
                 var paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));
+                var borders = parseInt(section.css("border-left-width")*2); 
                 sectionHeight = (windowsHeight - paddings);
             }
 
