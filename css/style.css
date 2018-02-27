@@ -69,27 +69,37 @@ h5{
     margin: 0 auto;
     margin-top: 20px;
 }
-/*a, a:link{ 
-	color: #FFFFFF;
-	text-decoration: none;
+
+#iqon-preloader{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    background-color: #202131;
+    overflow: hidden;
+	background:  radial-gradient(circle, #FFFFFF, #a5a7ad);
+
 }
 
-a:hover{
-	color: #FFFFFF;
-	text-decoration: none;
-	text-shadow: #457B9D 0.1em 0.1em;
+#iqon-preloader img{
+	width: 256px;
+	height: 256px;
 }
-
-a:active{
-	text-decoration: none;
-	color: #DCDCDC;
-	text-shadow: #457B9D 0.05em 0.05em;
-}
-
-a:visited{
-	text-decoration: none;
-	color: #FFFFFF;
-}*/
 
 #menu-bar{
 	position: fixed;
@@ -155,8 +165,8 @@ a:visited{
 }
 
 .logo img{
-	width: 75px;
-	height: 75px;
+	width: 85px;
+	height: 85px;
 }
 
 #left-sidebar a, a:link{ 

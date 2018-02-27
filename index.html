@@ -37,7 +37,11 @@
     <![endif]-->
   </head>
   <body>
-    
+    <div id="iqon-preloader">
+        <img src="img/FullSizeRender.png">
+    </div>
+
+
     <div id="menu-bar" class="active">
         <i class="fas fa-bars"></i>
         <i class="fas fa-arrow-left"></i>
@@ -680,6 +684,11 @@
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        setTimeout(function(){
+                $("#iqon-preloader").fadeOut(800);
+            }, 900);
+    </script>
     <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
