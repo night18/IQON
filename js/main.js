@@ -1,32 +1,60 @@
+function sectionAnimate(index, nextIndex, direction){
+  
+ 
+  /* this code is part of the onLeave callback */   
+  if( nextIndex == 4 ) {
+    var $isAnimatedSecond = $('#ourteam .is-animated');
+    for(var i = 0; i < 16 ; i++){
+      if(i/4 < 1){
+        $isAnimatedSecond.eq(i).addClass('animated fadeInDownBig'); 
+      }else if(i/4 < 2){
+        $isAnimatedSecond.eq(i).addClass('animated fadeInUpBig');
+      }
+    } 
+    $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+    $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+    $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
+    $isAnimatedSecond.eq(3).css('animation-delay', '.12s');
+    $isAnimatedSecond.eq(7).css('animation-delay', '.3s');
+    $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
+    $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
+    $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
+  }
+}
+
+function slideAnimate(anchorLink, index, slideIndex, direction, nextSlideIndex){
+  
+ 
+  if( anchorLink == 'team' && slideIndex == 0 && nextSlideIndex == 1){
+    console.log('!!!');
+    var $isAnimatedSecond = $('#ouradvisor .is-animated');
+    for(var i = 0; i < 16 ; i++){
+      if(i/4 < 1){
+        $isAnimatedSecond.eq(i).addClass('animated fadeInDownBig'); 
+      }else if(i/4 < 2){
+        $isAnimatedSecond.eq(i).addClass('animated fadeInUpBig');
+      }
+    } 
+    $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+    $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+    $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
+    $isAnimatedSecond.eq(3).css('animation-delay', '.12s');
+    $isAnimatedSecond.eq(7).css('animation-delay', '.3s');
+    $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
+    $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
+    $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
+  }
+  
+}
+
+
 function main() {
 
 (function () {
    'use strict';
-   let previousHeight = 0;
-   let newHeight = 0;
 
- //   $('a.page-scroll').click(function() {
- //        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	// 		var target = $(this.hash);
-	// 		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-						
-	// 		newHeight = target.offset().top + previousHeight;
-	// 		previousHeight = newHeight;
 
-	// 		if (target.length) {
 
-	//             $('#main-content').animate({
-	//               scrollTop:newHeight
-	//             }, 900);
-
-	//             if( $('#main-content').prop("scrollHeight") - $('#main-content').height() < previousHeight ){
-	//             	previousHeight = $('#main-content').prop("scrollHeight") - $('#main-content').height();
-	//             }
-
-	//             return false;
-	// 		}
- //        }
-	// });
 
 	$(document).ready(function () {
 		$('#menu-bar').on('click', function () {
@@ -41,7 +69,15 @@ function main() {
       scrollOverflow: true,
       bigSectionsDestination: top,
       // normalScrollElements:'#tf-roadmap',
-      anchors:['home', 'mission', 'work', 'team', 'fund']
+      anchors:['home', 'mission', 'work', 'team', 'fund'],
+      onLeave: function(index, nextIndex, direction){
+        sectionAnimate(index, nextIndex, direction);
+        console.log('i:'+index+' n:'+nextIndex);
+      },
+      onSlideLeave (anchorLink, index, slideIndex, direction, nextSlideIndex){
+        slideAnimate(anchorLink, index, slideIndex, direction, nextSlideIndex);
+        console.log('a:'+ anchorLink+'i:'+slideIndex+' n:'+nextSlideIndex);
+      }
     });
     
 	});
@@ -113,4 +149,5 @@ function main() {
 }());
 
 }
+
 main();
