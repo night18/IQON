@@ -480,28 +480,21 @@ h5{
 /*========================team=========================*/
 #tf-team{
 	width: 100%;
-	/*background: url(../img/38.jpg);*/
-	/*background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;*/
-	/*background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(123, 156, 237));
-    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(123, 156, 237)));
-    background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(123, 156, 237) 100%);
-	*/
 	background: #e9ece5; 
-	/* color: #E9F6D0 ; */
-    color: #203067 ;
+	color: #203067 ;
     padding: 20px 0px;
     font-weight: bold;
     text-align: center;
 }
 
+#tf-team .subtitle{
+	padding: 10px 0px;
+}
+
 .team-hive{
 	margin: 0 auto;
 	width: 100%;
-	padding: 20px 20px;
-	max-width: 1400px;
+	padding: 5px 20px;
 	overflow-y: hidden;
 }
 
@@ -509,7 +502,7 @@ h5{
 	max-width: 80%;
 	max-height: 80%;
 	display: block;
-	padding: 15px 0;
+	padding: 10px 0;
 	overflow: hidden;
 	text-align: center;
 	margin: auto;
@@ -531,7 +524,7 @@ h5{
 	transition: 0.9s all ;
 	-webkit-transition-timing-function: ease-in-out;
 	transition-timing-function: ease-in-out; 
-	filter: grayscale(100%);
+	/*filter: grayscale(100%);*/
 }
 
 .image-block img:hover{
@@ -552,7 +545,7 @@ h5{
 
 
 .team-hive .content-block{
-	padding: 10px 0px;
+	padding: 5px 0px;
 }
 
 .member-name{
