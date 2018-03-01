@@ -591,6 +591,23 @@ h5{
 	font-size: 1vmax;
 }
 
+/*========================buy=========================*/
+#tf-buy{
+	background: #e9ece5; 
+	color: #203067 ;
+}
+
+.img-box{
+	width: 70px;
+	height: 40px;
+	border: 2px solid #203067;
+	text-align: center;
+}
+
+#tf-buy img{
+	max-width: 100%;
+	max-height: 36px;
+} 
 
 /*========================fund=========================*/
 
