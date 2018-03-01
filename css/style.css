@@ -41,7 +41,7 @@ h5{
 .subtitle{
 	font-family: 'Cinzel Decorative', cursive;
 	font-weight: bold;
-	font-size: 2vmax;
+	font-size: 32px;
 	padding: 20px 0px;
 }
 
@@ -65,7 +65,9 @@ h5{
     border-top: 4px solid #BC0883 ;
     height: 10px;
     width: 60px;
-    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 #iqon-preloader{
@@ -176,16 +178,17 @@ h5{
 #main-menu li{
 	display: block;
 	box-sizing: border-box;
-	min-height: 25px;
+	min-height: 35px;
  	padding: 5px;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1vmax;
 }
 #main-menu{
 	list-style: none;
 	margin: 0;
 	padding: 20px 0;
 	font-family: 'Raleway', sans-serif;
+	/*font-size: 1.1em;*/
 	width: 100%;
 	text-align: center;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
@@ -194,8 +197,9 @@ h5{
 
 
 #left-sidebar #main-menu li a i {
+    margin-right:  0;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.3em;
     margin-bottom: 5px;
 }
 
@@ -203,7 +207,7 @@ h5{
 #left-sidebar a:hover{
 	color: #c9c7c7;
 	text-decoration: none;
-	text-shadow: #457B9D 0.05em 0.05em;
+	text-shadow: #457B9D 0.1em 0.1em;
 }
 
 #left-sidebar a:active{
@@ -225,7 +229,7 @@ h5{
 	width: auto;
 	text-align: center;
 	font-size: 1em;
-	transition: all 0.4s;
+	transition: all 0.5s;
 	z-index: 50;
 } 
 
@@ -320,43 +324,6 @@ h5{
 	padding: 7px 0;
 }
 
-/*========================features=========================*/
-#tf-feature{
-	background: #e9ece5; 
-	color: #203067 ;
-    text-align: center;
-}
-
-#tf-feature .row{
-	padding: 8px 0;
-}
-
-#tf-feature .row div{
-	padding: 0 8px;
-}
-
-#tf-feature .row:nth-child(even) div:nth-child(2){
-	text-align: left;
-	height: 100%;
-}
-
-#tf-feature .row:nth-child(odd) div:nth-child(1){
-	text-align: left;
-	height: 100%;
-}
-
-#tf-feature img{
-	max-height: 40vh; 
-}
-
-.presubsubtitle{
-	font-size: 16px;
-}
-
-.subsubtitle{
-	font-size: 24px;
-	font-weight: bold;
-}
 
 /*========================how it works=========================*/
 #tf-work{
@@ -513,9 +480,9 @@ h5{
 /*========================team=========================*/
 #tf-team{
 	width: 100%;
-	height: 100%;
 	background: #e9ece5; 
 	color: #203067 ;
+    padding: 20px 0px;
     font-weight: bold;
     text-align: center;
 }
@@ -582,13 +549,13 @@ h5{
 }
 
 .member-name{
-	font-size: 1.2vmax;
+	font-size: 16px;
 	font-family: 'Cinzel Decorative', cursive;
 }
 
 .member-title{
 	font-family: 'Cinzel Decorative', cursive;
-	font-size: 1vmax;
+	font-size: 14px;
 }
 
 
@@ -643,43 +610,6 @@ h5{
 li {
     margin-bottom: 1em;
 }
-
-/*========================contact=========================*/
-
-#tf-press{
-	background: #e9ece5; 
-	text-align: center;
-}
-
-#tf-press .row{
-	padding-top: 20px;}
-
-.card
-{
-    background: #4ECDC4;
-    text-align: center;
-    vertical-align: middle;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height: 12vmax;
-    width: 100%;
-    padding: 0 10px;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.card .media-source{
-	margin-top: 2vmax;
-	width: 50%
-}
-
-.card .media-content{
-	margin: 3vmax auto 0 auto;
-	width: 80%;
-	font-size: 14px;
-}
-
 /*========================contact=========================*/
 
 #tf-contact{
