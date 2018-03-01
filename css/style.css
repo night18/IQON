@@ -6,11 +6,9 @@ body, html{
 	font-family: 'Raleway', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	color: #000000;
 	font-size: 20px;
 	height: 100vh;
 	min-height: 100vh;
-	background-color: #FFFFFF;
 }
 
 h1{
@@ -255,6 +253,14 @@ h5{
     padding-left: 100px;
 }
 
+#main-content .section{
+	background: #d3f4f9; 
+    background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 #main-content.active{
 	padding-left: 0;
 }
@@ -288,11 +294,6 @@ h5{
 
 #tf-home{
 	position: relative;
-	/*background: url(../img/back2.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;*/
 }
 
 
@@ -302,11 +303,7 @@ h5{
 
 #tf-mission{
 	width: 100%;
-	/* background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(70, 126, 186)); */
-    /* background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(70, 126, 186))); */
-    /* background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(70, 126, 186) 100%); */
-	background: #FFFFFF;
-    color: #17335C ; 
+	color: #17335C ; 
     /*color: #0000  ;*/
     font-weight: 600;
 }
@@ -322,8 +319,6 @@ h5{
 
 /*========================features=========================*/
 #tf-feature{
-	background: #e9ece5; 
-	color: #203067 ;
     text-align: center;
 }
 
@@ -360,10 +355,6 @@ h5{
 
 /*========================how it works=========================*/
 #tf-work{
-	/*width: 100%;*/
-	background: #e9ece5; 
-	/* color: #E9F6D0 ; */
-    color: #203067 ;
     padding: 50px 0px;
     text-align: center;
     font-weight: 600;
@@ -379,8 +370,6 @@ h5{
 #tf-roadmap{
 	width: 100%;
 	height: 100%;
-	background: #FFFFFF; 
-    color: #17335C;
     perspective: 1200px;
     transform-style: preserve-3d;
     font-weight: bold;
@@ -514,8 +503,6 @@ h5{
 #tf-team{
 	width: 100%;
 	height: 100%;
-	background: #e9ece5; 
-	color: #203067 ;
     font-weight: bold;
     text-align: center;
 }
@@ -593,8 +580,7 @@ h5{
 
 /*========================buy=========================*/
 #tf-buy{
-	background: #e9ece5; 
-	color: #203067 ;
+	
 }
 
 .img-box{
@@ -621,12 +607,6 @@ h5{
 
 #tf-fund{
 	width: 100%;
-	/* background: linear-gradient(to bottom,rgb(177, 194, 236), rgb(70, 126, 186)); */
-    /* background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(177, 194, 236)) color-stop(100%,rgb(70, 126, 186))); */
-    /* background: -webkit-linear-gradient(top, rgb(177, 194, 236) 0%, rgb(70, 126, 186) 100%); */
-	background: #FFFFFF;
-    /* color: #E9F6D0 ; */
-    color: #17335C;
     font-weight: bold;
 }
 
@@ -672,7 +652,6 @@ li {
 /*========================contact=========================*/
 
 #tf-press{
-	background: #e9ece5; 
 	text-align: center;
 }
 
@@ -708,8 +687,6 @@ li {
 /*========================contact=========================*/
 
 #tf-contact{
-	background: #e9ece5; 
-    color: #203067 ;
     padding: 50px 80px 50px 80px;
     position: relative;
     display: block;
@@ -829,6 +806,10 @@ nav#footer .container{
 	#main-content{
 		height: 100%;
 		position: relative;
+		background-image: url("");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 
 	/*==========================inner-container========================*/
