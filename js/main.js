@@ -24,6 +24,10 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
     $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
     $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
+  }else if(nextIndex == 6){
+    var $isAnimatedSecond = $('#tf-buy .is-animated');
+    $isAnimatedSecond.addClass('animated fadeIn');
+    $isAnimatedSecond.css('animation-delay', '.5s');
   }else if (nextIndex == 8) {
     var $isAnimatedSecond = $('#tf-press .is-animated');
     $isAnimatedSecond.addClass('animated flipInY');
@@ -68,26 +72,53 @@ function main() {
 	$(document).ready(function () {
 		$('#menu-bar').on('click', function () {
 			$('#left-sidebar').toggleClass('active');
-      $('#main-content').toggleClass('active');
-      $('#menu-bar').toggleClass('active');
+			$('#main-content').toggleClass('active');
+			$('#menu-bar').toggleClass('active');
+		});
+		
+		$('.center').slick({
+		  centerMode: true,
+		  variableWidth: true,
+		  centerPadding: '20px',
+		  slidesToShow: 3,
+		  responsive: [
+			{
+			  breakpoint: 768,
+			  settings: {
+				arrows: false,
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				arrows: false,
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 1
+			  }
+			}
+		  ]
 		});
 
-    $('#main-content').fullpage({
-      loopHorizontal: false,
-      slidesNavigation: true,
-      scrollOverflow: true,
-      bigSectionsDestination: top,
-      // normalScrollElements:'#tf-roadmap',
-      anchors:['home', 'mission', 'feature', 'work', 'team', 'buy','fund','press'],
-      onLeave: function(index, nextIndex, direction){
-        sectionAnimate(index, nextIndex, direction);
-        console.log('i:'+index+' n:'+nextIndex);
-      },
-      onSlideLeave (anchorLink, index, slideIndex, direction, nextSlideIndex){
-        slideAnimate(anchorLink, index, slideIndex, direction, nextSlideIndex);
-        console.log('a:'+ anchorLink+'i:'+slideIndex+' n:'+nextSlideIndex);
-      }
-    });
+		$('#main-content').fullpage({
+		  loopHorizontal: false,
+		  slidesNavigation: true,
+		  scrollOverflow: true,
+		  bigSectionsDestination: top,
+		  // normalScrollElements:'#tf-roadmap',
+		  anchors:['home', 'mission', 'feature', 'work', 'team', 'buy','fund','press'],
+		  onLeave: function(index, nextIndex, direction){
+			sectionAnimate(index, nextIndex, direction);
+			console.log('i:'+index+' n:'+nextIndex);
+		  },
+		  onSlideLeave (anchorLink, index, slideIndex, direction, nextSlideIndex){
+			slideAnimate(anchorLink, index, slideIndex, direction, nextSlideIndex);
+			console.log('a:'+ anchorLink+'i:'+slideIndex+' n:'+nextSlideIndex);
+		  }
+		});
     
 	});
 
