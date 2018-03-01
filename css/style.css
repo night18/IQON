@@ -192,8 +192,8 @@ h5{
 
 
 #left-sidebar #main-menu li a i {
-    display: block;
-    font-size: 1.1em;
+    display: none;
+    font-size: 1em;
     margin-bottom: 5px;
 }
 
@@ -683,7 +683,6 @@ li {
 .card
 {
     background: #f7fff7;
-    /*color: #ffffff;*/
     text-align: center;
     vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -702,7 +701,7 @@ li {
 }
 
 .card .media-content{
-	margin: 3vmax auto 0 auto;
+	margin: 3vmax auto 1vmax auto;
 	width: 80%;
 	font-size: 14px;
 }
@@ -808,6 +807,7 @@ nav#footer .container{
 
 	}
 
+
 	#main-menu{
 		display: block;
 		list-style: none;
@@ -850,6 +850,8 @@ nav#footer .container{
 		height: 100vh;
 		min-height: 100vh;
 	}
+
+
 
 }
 
