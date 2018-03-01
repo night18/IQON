@@ -370,6 +370,10 @@ h5{
     font-weight: 600;
 }
 
+#tf-work .container{
+	height: 80vh;
+}
+
 #tf-work .date, #tf-work .hashtag{
 	
 	font-weight: bold;
@@ -537,6 +541,8 @@ h5{
 	text-align: center;
 	margin: auto;
 }
+
+
 
 .image-container{
 	display: block;
