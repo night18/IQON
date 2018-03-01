@@ -226,7 +226,7 @@ function main() {
 		$('#main-content').fullpage({
 		  loopHorizontal: false,
 		  slidesNavigation: true,
-		  scrollOverflow: true,
+		  scrollOverflow: false,
 		  bigSectionsDestination: top,
 		  // normalScrollElements:'#tf-roadmap',
 		  anchors:['home', 'mission', 'feature', 'work', 'team', 'buy','fund','press'],

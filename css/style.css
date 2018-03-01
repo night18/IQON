@@ -687,7 +687,7 @@ li {
     text-align: center;
     vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height: 12vmax;
+    height: 100%;
     width: 100%;
     padding: 0 10px;
 }
