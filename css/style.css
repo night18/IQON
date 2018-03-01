@@ -253,13 +253,7 @@ h5{
     padding-left: 100px;
 }
 
-#main-content .section{
-	background: #d3f4f9; 
-    background-image: url("");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
-}
+
 
 #main-content.active{
 	padding-left: 0;
@@ -284,6 +278,12 @@ h5{
 }
 
 .section{
+	background: #d3f4f9; 
+	color:#4F4A41;
+    background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
 	border-style: solid;
     border-width: 1em;
     border-color: #1f2223;
@@ -303,18 +303,28 @@ h5{
 
 #tf-mission{
 	width: 100%;
-	color: #17335C ; 
     /*color: #0000  ;*/
     font-weight: 600;
 }
 
-#tf-mission .date, #tf-mission .hashtag{
+#tf-mission .cardtitle{
 	font-weight: bold;
-	color:#BC0883 ;
+	text-transform: uppercase;
+	color:#1a535c ;
+	font-size: 1.4em;
+}
+#tf-mission .carddesc{
+	font-size: 1em;
 }
 
-#tf-mission .content-block{
-	padding: 7px 0;
+#tf-mission .card{
+	padding: 7px;
+	text-align: center;
+}
+
+#tf-mission img{
+	width: 80%;
+	margin: 15px auto;
 }
 
 /*========================features=========================*/
@@ -361,7 +371,7 @@ h5{
 }
 
 #tf-work .date, #tf-work .hashtag{
-	color:#BC0883 ;
+	
 	font-weight: bold;
 }
 
@@ -569,13 +579,13 @@ h5{
 }
 
 .member-name{
-	font-size: 1.2vmax;
+	font-size: 1em;
 	font-family: 'Cinzel Decorative', cursive;
 }
 
 .member-title{
 	font-family: 'Cinzel Decorative', cursive;
-	font-size: 1vmax;
+	font-size: 0.8em;
 }
 
 /*========================buy=========================*/
@@ -596,11 +606,17 @@ h5{
 } 
 
 .token-format tr:nth-child(odd) {
-	background: green;
+	background: #818E85;
+	color: #FFFFFF;
 }
 
 .token-format tr:nth-child(even) {
-	background: red;
+	background: #97A198;
+	color: #FFFFFF;
+}
+
+.token-format td {
+	padding: 2px 4px;
 }
 
 /*========================fund=========================*/
@@ -660,7 +676,8 @@ li {
 
 .card
 {
-    background: #4ECDC4;
+    background: #f7fff7;
+    /*color: #ffffff;*/
     text-align: center;
     vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
