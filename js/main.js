@@ -2,7 +2,12 @@ function sectionAnimate(index, nextIndex, direction){
   
  
   /* this code is part of the onLeave callback */   
-  if( nextIndex == 4 ) {
+  if( nextIndex == 3) {
+    var $isAnimatedSecond = $('#tf-feature .is-animated');
+    $isAnimatedSecond.addClass('animated zoomIn');
+    $isAnimatedSecond.css('animation-delay', '.2s');
+
+  }else if( nextIndex == 5 ) {
     var $isAnimatedSecond = $('#ourteam .is-animated');
     for(var i = 0; i < 16 ; i++){
       if(i/4 < 1){
@@ -19,6 +24,10 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
     $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
     $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
+  }else if (nextIndex == 8) {
+    var $isAnimatedSecond = $('#tf-press .is-animated');
+    $isAnimatedSecond.addClass('animated flipInY');
+    $isAnimatedSecond.css('animation-delay', '.5s');
   }
 }
 
@@ -69,7 +78,7 @@ function main() {
       scrollOverflow: true,
       bigSectionsDestination: top,
       // normalScrollElements:'#tf-roadmap',
-      anchors:['home', 'mission', 'work', 'team', 'fund'],
+      anchors:['home', 'mission', 'feature', 'work', 'team', 'buy','fund','press'],
       onLeave: function(index, nextIndex, direction){
         sectionAnimate(index, nextIndex, direction);
         console.log('i:'+index+' n:'+nextIndex);
