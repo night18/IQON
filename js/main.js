@@ -247,7 +247,7 @@ function main() {
       scrollbar: {
         el: '.swiper-scrollbar',
       },
-      mousewheel: true,
+      mousewheel: false,
     });
 
 
