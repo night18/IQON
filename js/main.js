@@ -7,7 +7,7 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.addClass('animated zoomIn');
     $isAnimatedSecond.css('animation-delay', '.2s');
 
-  }else if( nextIndex == 5 ) {
+  }else if( nextIndex == 6 ) {
     var $isAnimatedSecond = $('#ourteam .is-animated');
     for(var i = 0; i < 16 ; i++){
       if(i/4 < 1){
@@ -24,11 +24,11 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
     $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
     $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
-  }else if(nextIndex == 6){
+  }else if(nextIndex == 7){
     var $isAnimatedSecond = $('#tf-buy .is-animated');
     $isAnimatedSecond.addClass('animated fadeIn');
     $isAnimatedSecond.css('animation-delay', '.5s');
-  }else if (nextIndex == 8) {
+  }else if (nextIndex == 9) {
     var $isAnimatedSecond = $('#tf-press .is-animated');
     $isAnimatedSecond.addClass('animated flipInY');
     $isAnimatedSecond.css('animation-delay', '.5s');
@@ -229,7 +229,7 @@ function main() {
 		  scrollOverflow: false,
 		  bigSectionsDestination: top,
 		  // normalScrollElements:'#tf-roadmap',
-		  anchors:['home', 'mission', 'feature', 'work', 'team', 'buy','fund','press'],
+		  anchors:['home', 'mission', 'feature', 'work', 'roadmap','team', 'buy','fund','press'],
 		  onLeave: function(index, nextIndex, direction){
 			sectionAnimate(index, nextIndex, direction);
 			console.log('i:'+index+' n:'+nextIndex);
@@ -239,6 +239,38 @@ function main() {
 			console.log('a:'+ anchorLink+'i:'+slideIndex+' n:'+nextSlideIndex);
 		  }
 		});
+
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
+    });
+
+
+    $('.timeline-row').on('click', function (){
+      console.log($(this).data('focused'));
+      if(!$(this).data('focused')){
+        $(this).data('focused', true);
+        $(this).data('float', $(this).css('float'));
+        $(this).css('float', 'none');
+        $(this).parent().css('clear', 'both');
+
+        $(this).parent().addClass('timeline-active');
+
+
+      }else{//focused
+        $(this).css('float', $(this).data('float'));
+        $(this).parent().css('clear', 'none');
+        $(this).data('focused', false);
+
+        $(this).parent().removeClass('timeline-active');
+      }
+      
+    });
     
 	});
 
