@@ -240,16 +240,17 @@ function main() {
 		  }
 		});
 
-    var swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
       slidesPerView: 'auto',
       freeMode: true,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
       mousewheel: false,
     });
 
+    let clock = $('.timer').FlipClock(3600*24*3, {
+      clockFace: 'DailyCounter',
+      countdown: true,
+    });
 
     $('.timeline-row').on('click', function (){
       console.log($(this).data('focused'));
