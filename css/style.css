@@ -300,6 +300,18 @@ h5{
     min-height: 100%;
 }
 
+.slogan{
+	width: 800px;
+	margin: 0 auto;
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+.slogan h1{
+	font-size: 36px;
+	font-weight: bold;
+}
+
+
 .overlay{
 	display: block;
 	margin: 0 auto;
@@ -408,6 +420,38 @@ h5{
 .timer{
 	margin: 1em auto;
 }
+
+.button-container{
+	width: 100%;
+	text-align: center;
+
+}
+
+a.fa.fa-angle-down {
+	position: absolute;
+	bottom: 7%;
+	left: 49%;
+	padding: 8px 12px;
+	color: #1ac6ff;
+	border: 2px solid #1ac6ff;
+	border-radius: 50%;
+	font-size: 24px;
+	transition: all 0.5s;
+
+}
+a.fa.fa-angle-down:hover{
+	background: #1ac6ff;
+	color: #ffffff;
+	border: 2px solid #1ac6ff;
+}
+
+a.fa.fa-angle-down:active{
+	background: #00ace6;
+	color: #ffffff;
+	border: 2px solid #00ace6;
+	box-shadow:  inset 0.0em 0.1em 10px #006080;
+}
+
 
 /*========================mission=========================*/
 
@@ -769,6 +813,14 @@ li.timeline-active{
 
 .token-format td {
 	padding: 2px 4px;
+}
+
+.tokensale{
+	margin-top: 30px;
+}
+
+.tokensale .buytoken{
+	max-width: 250px;
 }
 
 /*========================fund=========================*/

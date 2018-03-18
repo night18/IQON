@@ -193,7 +193,7 @@ function main() {
 			$('#menu-bar').toggleClass('active');
 		});
 		
-		$('.center').slick({
+		$('.slider').slick({
 		  centerMode: true,
 		  variableWidth: true,
 		  centerPadding: '20px',
@@ -226,7 +226,7 @@ function main() {
 		  scrollOverflow: false,
 		  bigSectionsDestination: top,
 		  // normalScrollElements:'#tf-roadmap',
-		  anchors:['home', 'mission', 'feature', 'work', 'roadmap','team', 'buy','fund','press'],
+		  anchors:['home', 'mission', 'feature', 'work', 'buy', 'roadmap','team','fund','press'],
 		  onLeave: function(index, nextIndex, direction){
 			sectionAnimate(index, nextIndex, direction);
 			console.log('i:'+index+' n:'+nextIndex);
@@ -257,6 +257,18 @@ function main() {
       $('.timer-container').addClass('finish');
     }
     
+    anime.timeline({loop: true})
+    .add({
+      targets: '.button-container .fa-angle-down',
+      translateY:[-15,0],
+      duration:600
+    })
+    .add({
+      targets: '.button-container .fa-angle-down',
+      translateY:[0,-15],
+      duration:600
+    });
+
 
     $('.timeline-row').on('click', function (){
       console.log($(this).data('focused'));
