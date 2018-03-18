@@ -186,9 +186,6 @@ function main() {
 (function () {
    'use strict';
 
-
-
-
 	$(document).ready(function () {
 		$('#menu-bar').on('click', function () {
 			$('#left-sidebar').toggleClass('active');
@@ -247,10 +244,19 @@ function main() {
       mousewheel: false,
     });
 
-    let clock = $('.timer').FlipClock(3600*24*3, {
-      clockFace: 'DailyCounter',
-      countdown: true,
-    });
+    let now = new Date();
+    let endTime = new Date("May 26, 2018 12:00:00");
+    let timeDiff = (endTime.getTime() - now.getTime())/1000;
+
+    if(timeDiff > 0){
+      let clock = $('.timer').FlipClock(timeDiff, {
+        clockFace: 'DailyCounter',
+        countdown: true,
+      });
+    }else{
+      $('.timer-container').addClass('finish');
+    }
+    
 
     $('.timeline-row').on('click', function (){
       console.log($(this).data('focused'));

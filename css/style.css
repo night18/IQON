@@ -370,10 +370,15 @@ h5{
 	background-color: #ffffff;
 }
 
-.timer-container{
-	display: block;
+.timer-container h1{
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: bold;
+}
+
+.times-up{
+	display: none;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 50px;
 	position: relative;
 	padding: 30px 40px;
 	border-radius: 20px;
@@ -381,9 +386,23 @@ h5{
 	text-align: center;
 }
 
-.timer-container h1{
-	font-family: 'Cinzel Decorative', cursive;
-	font-size: bold;
+.finish .times-up{
+	display: block;
+}
+
+.times-processing{
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	padding: 30px 40px;
+	border-radius: 20px;
+	width: 700px;
+	text-align: center;
+}
+
+.finish .times-processing{
+	display: none;
 }
 
 .timer{
