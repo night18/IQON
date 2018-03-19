@@ -831,6 +831,11 @@ li.timeline-active{
 	padding: 7px 0;
 }
 
+#chartdiv{
+	width: 100%;
+	height: 500pt
+} 
+
 .pie{
 	display: block;
 	overflow:hidden;
