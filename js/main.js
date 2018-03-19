@@ -7,7 +7,7 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.addClass('animated zoomIn');
     $isAnimatedSecond.css('animation-delay', '.2s');
 
-  }else if( nextIndex == 6 ) {
+  }else if( nextIndex == 7 ) {
     var $isAnimatedSecond = $('#ourteam .is-animated');
     for(var i = 0; i < 16 ; i++){
       if(i/4 < 1){
@@ -24,7 +24,7 @@ function sectionAnimate(index, nextIndex, direction){
     $isAnimatedSecond.eq(6).css('animation-delay', '.6s');
     $isAnimatedSecond.eq(5).css('animation-delay', '.9s');
     $isAnimatedSecond.eq(4).css('animation-delay', '.12s');
-  }else if(nextIndex == 7){
+  }else if(nextIndex == 5){
     var $isAnimatedSecond = $('#tf-buy .is-animated');
     $isAnimatedSecond.addClass('animated fadeIn');
     $isAnimatedSecond.css('animation-delay', '.5s');
