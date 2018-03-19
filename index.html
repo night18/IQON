@@ -397,6 +397,7 @@
                     <div class="center tokensale" >
                          <a href="" class="linkbutton buytoken">Buy Tokens Now</a>
                     </div>
+					
                 </div>
             </div>
 
@@ -712,40 +713,28 @@
 
 			
 
-			<div id="tf-fund" class="section">
+            <div id="tf-fund" class="section">
                 <div class="container">
-                    <div class="subtitle center"> Fund Allocation </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <!-- <div class="container"> -->
-                            <div class="image-block">
-                                	<img src="img/Token Distribution.png">
+                    <div id="ourteam" class="slide" data-anchor="team1">
+                        <div class="subtitle center"> Fund Allocation </div>
+                        <div class="team-hive">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div id="pieChart1"></div>
                             </div>
-								<!--div class="pie" data-pie="#0000cc 5, #6600ff 5, #006666 4, #b45919 3, #7f4319 3, #33DF00 2, #DF7300 1, #DF2C00 1"></div>-->
-                            
-                        <!-- </div> -->
+						</div>
+
                     </div>
-					<div class="col-sm-12 col-md-6 col-lg-6">
-						<div class="content-block">
-							<ul><font size="4">
-                            <li style="color: #0000cc">
-                            <span>A Investors</span>
-                            </li>
-                            <li style="color: #6600ff">
-                            <span>B Ambassaddrs</span>
-                            </li>
-                            <li style="color: #006666">
-                            <span>C Exchange Liquidity</span>
-                            </li>
-                            <li style="color: #b45919">
-                            <span>D Team</span>
-                            </li>
-                            </font>
-                            </ul>
-                        </div>
-					</div>
-				</div>
-                
-            </div>
+                    <div id="ourteam" class="slide" data-anchor="team1">
+                        <div class="subtitle center"> Token Allocation </div>
+                        <div class="team-hive">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div id="pieChart2"></div>
+                            </div>
+						</div>
+
+                    </div>
+                </div> 
+            </div> 
 	        
             <div id="tf-press" class="section">
                 <div class="container">
@@ -880,6 +869,186 @@
     <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <!-- Javascripts
     ================================================== -->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="js/d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart1", {
+	"header": {
+		"title": {
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 590,
+		"pieOuterRadius": "90%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Investors",
+				"value": 60,
+				"color": "#00047c"
+			},
+			{
+				"label": "Ambassaddrs",
+				"value": 20,
+				"color": "#2f3399"
+			},
+			{
+				"label": "Exchange Liquidity",
+				"value": 10,
+				"color": "#2f52aa"
+			},
+			{
+				"label": "Team",
+				"value": 10,
+				"color": "#2e58c9"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"mainLabel": {
+			"font": "Cinzel Decorative",
+			"fontSize": 12
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"font": "georgia",
+			"fontSize": 20,
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "elastic",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	},
+	"callbacks": {}
+});
+</script>
+<script>
+var pie = new d3pie("pieChart2", {
+	"header": {
+		"title": {
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 590,
+		"pieOuterRadius": "90%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Investors",
+				"value": 60,
+				"color": "#00047c"
+			},
+			{
+				"label": "Ambassaddrs",
+				"value": 20,
+				"color": "#2f3399"
+			},
+			{
+				"label": "Exchange Liquidity",
+				"value": 10,
+				"color": "#2f52aa"
+			},
+			{
+				"label": "Team",
+				"value": 10,
+				"color": "#2e58c9"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"mainLabel": {
+			"font": "Cinzel Decorative",
+			"fontSize": 12
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"font": "georgia",
+			"fontSize": 20,
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "elastic",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	},
+	"callbacks": {}
+});
+</script>
     <script type="text/javascript" src="js/main.js"></script>
  <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
   
